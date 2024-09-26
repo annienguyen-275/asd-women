@@ -1,30 +1,181 @@
 <!DOCTYPE html> 
-<html> 
-	<!-- https://www.w3schools.com/w3css/default.asp -->
-   <head> 
-      <title>Hello World</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
-   
-   <body> 
+<html> <!-- contains html content -->
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+ 
+ 
+Authors:
+Annie Nguyen, Rajika Parihar
+ 
+Further Information:
+http://diystream.cns.utexas.edu/
 
-     	<header class="w3-container w3-flat-carrot">
-		<h1>My Hello World App!</h1>
-	</header>
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+The goal of this code is to calculate the probability that a woman is autistic.
+ 
+Known Issues:
+There are no known issues in this code.
 
-	<div class="w3-container"><!-- place main content here and it will show up between header and footer.-->
-		
-		<p>Hello World! (Your name) is here.</p>		
-
-	</div><!-- /content -->
+References:
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+-->
 	
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-		<p>This is the footer!</p>
-	</footer>
-	   
-   </body>
-</html>
+<head> 
+	<title>Hello World</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3-colors-flat.css">
+</head> 
 
+<script> // contains javascript content
+
+        var autistic_count = 0; // variable that stores how many times button for autism is clicked; set to 0
+        var nonautistic_count = 0; // variable that stores how many times button for no autism is clicked; set to 0
+
+        var autisticPercent = 0; // variable that stores the probability of autism; set to 0
+        var nonautisticPercent = 0; // variable that stores the probability of no autism; set to 0
+
+        function autisticAdd(){ // function that adds 1 to autism count
+		autistic_count = autistic_count + 1;
+        }
+
+        function nonautisticAdd(){ // function that adds 1 to no autism count
+		nonautistic_count = nonautistic_count + 1;
+	}
+	
+	function getResults(){ // function that makes results with probabilities appear in results paragraph
+		var autisticPercent = 100*(autistic_count/4); // variable that calculates autism probability
+		var nonautisticPercent = 100*(nonautistic_count/4); // variable that calculates no autism probability
+		var resultText = document.getElementById("results"); // variable that stores results text 
+		resultText.innerHTML = "Probability it is autism = " + autisticPercent + "%" + "<br> Probability it is not autism = " + nonautisticPercent + "%";
+	}
+
+</script>	
+
+
+<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
+<style>	
+.	body {
+	margin: 0em;
+	}
+
+	.page {
+    		width: 100vw;
+    		height: 100vh;
+    		position: fixed;
+    		top: 0;
+    		left: -100vw;
+    		overflow-y: auto;
+    		z-index: 0;
+    		background-color: hsl(0,0%,100%);
+	}
+
+  	.page:target {
+    		left: 0vw;
+   		 z-index: 1;
+	}
+
+	img, object{
+            	max-height:90%;
+        	max-width:90%;
+        	} <!-- resize image -->
+</style>
+
+<!-- STARTING PAGE -->
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot"> <!-- contains header content -->
+	<h1>Am I Autistic?</h1> <!-- header title -->
+</div>
+	
+<div id="content" class="w3-container"> <!-- contains text content -->
+	<p>Are you wondering if you have autism? Answer a few short questions to find out if you would benefit from being evaluated by a professional.</p> <!-- intro paragraph -->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- button that links to question 1 when clicked -->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!-- disclaimer -->
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!-- another disclaimer -->
+
+<img src="gingivitis.png" alt="teeth with red and swollen gums"> <!-- add image showing gingivitis. source: https://clinicablasi.com/en/how-to-know-if-i-have-gingivitis-and-periodontitis/  -->
+
+</div> <!-- added closing div tag to fix footer; missing in original code -->
+
+<!-- QUESTION 1 PAGE -->
+<div class="page" id="one"> <!-- contains page content -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Question 1</h1> <!-- header title -->
+	</div>
+	
+    	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
+		<p>Are you comfortable with chewing or biting?</p> <!-- question 1 text -->    
+		<a href="#two"  onclick="gingivitisAdd();" class="w3-btn w3-black"> Yes</a> <!-- button that links to question 2 when clicked & adds 1 to gingivitis count -->
+         	<a href="#two"  onclick="periodontitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 2 when clicked & adds 1 to periodontitis count -->
+ 	</div>
+</div>
+
+<!-- QUESTION 2 PAGE -->
+<div class="page" id="two"> <!-- contains page content -->
+	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Question 2</h1> <!-- header title -->
+	</div>
+	
+	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
+		<p>Do you have any loose teeth?</p> <!-- question 2 text -->
+		<a href="#three"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to question 3 when clicked & adds 1 to periodontitis count -->
+		<a href="#three"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 3 when clicked & adds 1 to gingivitis count -->
+	</div>
+</div>	
+
+<!-- QUESTION 3 PAGE -->
+<div class="page" id="three"> <!-- contains page content -->
+	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Question 3</h1> <!-- header title -->
+	</div>
+	
+	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
+		<p>Are there widening gaps between your teeth?</p> <!-- question 3 text -->
+		<a href="#four"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to question 4 when clicked & adds 1 to periodontitis count -->
+		<a href="#four"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 4 when clicked & adds 1 to gingivitis count -->
+	</div>
+</div>	
+
+<!-- QUESTION 4 PAGE -->
+<div class="page" id="four"> <!-- contains page content -->
+	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Question 4</h1> <!-- header title -->
+	</div>
+	
+	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
+		<p>Are your gums receding?</p> <!-- question 4 text -->
+		<a href="#five"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to results page when clicked & adds 1 to periodontitis count -->
+		<a href="#five"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to results page when clicked & adds 1 to gingivitis count -->
+	</div>
+</div>
+
+<!-- RESULTS PAGE -->
+<div class="page" id="five"> <!-- contains page content -->
+	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Results</h1> <!-- header title -->
+	</div>
+	
+	<div id="content" class="w3-container"> <!-- contains results content -->
+		<p id="results"></p> <!-- empty text where results will appear -->
+		<a onclick="getResults()" class="w3-btn w3-black">Get results</a> <!-- button that changes text when clicked -->
+	</div>
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- contains footer content across all pages -->
+	<p>DIY!</p> <!-- footer text -->
+</footer>
+
+	
+</body>
+</html>
