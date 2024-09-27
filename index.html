@@ -125,11 +125,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>I enjoy immersing myself in fantasy worlds, such as books, video games, or other media.</p> <!-- question 1 text -->    
-		<a href="#two"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
-         	<a href="#two"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
-		<a href="#two"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
-		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
-		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
+		<a href="#two"  onclick="autisticAdd1(); increaseProgress()" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
+         	<a href="#two"  onclick="autisticAdd2(); increaseProgress()" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
+		<a href="#two"  onclick="autisticAdd3(); increaseProgress()" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#two"  onclick="autisticAdd4(); increaseProgress()" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
+		<a href="#two"  onclick="autisticAdd5(); increaseProgress()" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
  	</div>
 
  	</div>
@@ -222,7 +222,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     </div>
 
     <button onclick="increaseProgress()">Increase Progress</button>
-    <button onclick="resetProgress()">Reset</button>
+    <!-- <button onclick="resetProgress()">Reset</button> -->
 
     <script>
       const progressBar = document.getElementById("progress");
@@ -230,15 +230,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
       function increaseProgress() {
         if (currentProgress < 100) {
-          currentProgress += 5;
+          currentProgress += 20;
           progressBar.style.width = currentProgress + "px";
         }
       }
 
-      function resetProgress() {
+      <!-- function resetProgress() {
         currentProgress = 0;
         progressBar.style.width = "0px";
-      }
+      } -->
     </script>
   </body>
 
