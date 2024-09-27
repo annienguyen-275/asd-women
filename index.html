@@ -61,17 +61,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getResults(){ // function that makes results with probabilities appear in results paragraph
 		var resultText = document.getElementById("results"); // variable that stores results text 
 		resultText.innerHTML = "Your score is: " + autistic_count + "<br />" + "0-56 - Does not indicate a high level of autistic traits."; //
-// progress bar code //
-      const progressBar = document.getElementById("progress");
-      let currentProgress = 0;
-
-      function increaseProgress() {
-        if (currentProgress < 100) {
-          currentProgress += 5;
-          progressBar.style.width = currentProgress + "px";
-        }
-      }
-
 
 </script>	
 
@@ -136,11 +125,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>I enjoy immersing myself in fantasy worlds, such as books, video games, or other media.</p> <!-- question 1 text -->    
-		<a href="#two"  onclick="autisticAdd1(); increaseProgress()" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
-         	<a href="#two"  onclick="autisticAdd2(); increaseProgress()" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
-		<a href="#two"  onclick="autisticAdd3(); increaseProgress()" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
-		<a href="#two"  onclick="autisticAdd4(); increaseProgress()" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
-		<a href="#two"  onclick="autisticAdd5(); increaseProgress()" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
+		<a href="#two"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
+         	<a href="#two"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
+		<a href="#two"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
+		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
  	</div>
 
  	</div>
@@ -207,36 +196,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!-- contains footer content across all pages -->
-    <style>
-      .progress-bar {
-        width: 500px;
-        background-color: #f0f0f0;
-        height: 30px;
-        margin-bottom: 10px;
-        border-radius: 15px;
-      }
-
-      .progress {
-        width: 0px;
-        height: 100%;
-        background-color: #4caf50;
-        transition: width 0.3s ease;
-      }
-    </style>
-  </head>
-
-  <body>
-    <h2>Progress Bar</h2>
-
-    <div class="progress-bar">
-      <div id="progress" class="progress"></div>
-    </div>
-
-    <button onclick="increaseProgress()">Increase Progress</button>
-    <!-- <button onclick="resetProgress()">Reset</button> -->
-  </body>
-
-	
 	<p>DIY!</p> <!-- footer text -->
 </footer>
 
