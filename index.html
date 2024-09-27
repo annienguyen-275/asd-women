@@ -61,6 +61,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getResults(){ // function that makes results with probabilities appear in results paragraph
 		var resultText = document.getElementById("results"); // variable that stores results text 
 		resultText.innerHTML = "Your score is: " + autistic_count + "<br />" + "0-56 - Does not indicate a high level of autistic traits."; //
+// progress bar code //
+      const progressBar = document.getElementById("progress");
+      let currentProgress = 0;
+
+      function increaseProgress() {
+        if (currentProgress < 100) {
+          currentProgress += 20;
+          progressBar.style.width = currentProgress + "px";
+        }
+      }
+
 
 </script>	
 
@@ -223,23 +234,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
     <button onclick="increaseProgress()">Increase Progress</button>
     <!-- <button onclick="resetProgress()">Reset</button> -->
-
-    <script>
-      const progressBar = document.getElementById("progress");
-      let currentProgress = 0;
-
-      function increaseProgress() {
-        if (currentProgress < 100) {
-          currentProgress += 20;
-          progressBar.style.width = currentProgress + "px";
-        }
-      }
-
-      <!-- function resetProgress() {
-        currentProgress = 0;
-        progressBar.style.width = "0px";
-      } -->
-    </script>
   </body>
 
 	
