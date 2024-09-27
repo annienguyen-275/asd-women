@@ -37,24 +37,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script> // contains javascript content
 
         var autistic_count = 0; // variable that stores how many times button for autism is clicked; set to 0
-        var nonautistic_count = 0; // variable that stores how many times button for no autism is clicked; set to 0
-
-        var autisticPercent = 0; // variable that stores the probability of autism; set to 0
-        var nonautisticPercent = 0; // variable that stores the probability of no autism; set to 0
-
-        function autisticAdd(){ // function that adds 1 to autism count
+	
+        function autisticAdd1(){ // function that adds 1 to autism count
 		autistic_count = autistic_count + 1;
         }
 
-        function nonautisticAdd(){ // function that adds 1 to no autism count
-		nonautistic_count = nonautistic_count + 1;
-	}
+        function autisticAdd2(){ // function that adds 2 to autism count
+		autistic_count = autistic_count + 2;
+        }
+
+        function autisticAdd3(){ // function that adds 3 to autism count
+		autistic_count = autistic_count + 3;
+        }
+
+        function autisticAdd4(){ // function that adds 4 to autism count
+		autistic_count = autistic_count + 4;
+        }
+
+        function autisticAdd5(){ // function that adds 5 to autism count
+		autistic_count = autistic_count + 5;
+        }
 	
 	function getResults(){ // function that makes results with probabilities appear in results paragraph
-		var autisticPercent = 100*(autistic_count/4); // variable that calculates autism probability
-		var nonautisticPercent = 100*(nonautistic_count/4); // variable that calculates no autism probability
 		var resultText = document.getElementById("results"); // variable that stores results text 
-		resultText.innerHTML = "Probability it is autism = " + autisticPercent + "%" + "<br> Probability it is not autism = " + nonautisticPercent + "%";
+		resultText.innerHTML = "Your score is:" autistic_count <br> "0-56 - Does not indicate a high level of autistic traits." <br> "More than 56  - Indicates a high level of autistic traits." <br> "Click Next to see detail interpretation of your score.";
 	}
 
 </script>	
@@ -115,9 +121,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>Are you comfortable with chewing or biting?</p> <!-- question 1 text -->    
-		<a href="#two"  onclick="gingivitisAdd();" class="w3-btn w3-black"> Yes</a> <!-- button that links to question 2 when clicked & adds 1 to gingivitis count -->
-         	<a href="#two"  onclick="periodontitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 2 when clicked & adds 1 to periodontitis count -->
+		<p>I enjoy immersing myself in fantasy worlds, such as books, video games, or other media.</p> <!-- question 1 text -->    
+		<a href="#two"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
+         	<a href="#two"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
+		<a href="#two"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
+		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
+ 	</div>
  	</div>
 </div>
 
@@ -128,9 +138,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>Do you have any loose teeth?</p> <!-- question 2 text -->
-		<a href="#three"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to question 3 when clicked & adds 1 to periodontitis count -->
-		<a href="#three"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 3 when clicked & adds 1 to gingivitis count -->
+		<p>I have a strong interest in fictional stories, books, movies, or TV shows.</p> <!-- question 2 text -->
+		<a href="#three"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 3 when clicked & adds 1 to autism count -->
+         	<a href="#three"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 3 when clicked & adds 2 to autism count -->
+		<a href="#three"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 3 when clicked & adds 3 to autism count -->
+		<a href="#three"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 3 when clicked & adds 4 to autism count -->
+		<a href="#three"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 3 when clicked & adds 5 to autism count -->
 	</div>
 </div>	
 
@@ -141,9 +154,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>Are there widening gaps between your teeth?</p> <!-- question 3 text -->
-		<a href="#four"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to question 4 when clicked & adds 1 to periodontitis count -->
-		<a href="#four"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to question 4 when clicked & adds 1 to gingivitis count -->
+		<p>At any point in my life, I played imaginatively, similar to others my age.</p> <!-- question 3 text -->
+		<a href="#four"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 4 when clicked & adds 1 to autism count -->
+         	<a href="#four"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 4 when clicked & adds 2 to autism count -->
+		<a href="#four"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#four"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 4 when clicked & adds 4 to autism count -->
+		<a href="#four"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 4 when clicked & adds 5 to autism count -->
 	</div>
 </div>	
 
@@ -154,9 +170,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>Are your gums receding?</p> <!-- question 4 text -->
-		<a href="#five"   onclick="periodontitisAdd();" class="w3-btn w3-black">Yes</a> <!-- button that links to results page when clicked & adds 1 to periodontitis count -->
-		<a href="#five"   onclick="gingivitisAdd();" class="w3-btn w3-black">No</a> <!-- button that links to results page when clicked & adds 1 to gingivitis count -->
+		<p>I have had imaginary friends or animals during my childhood or adulthood.</p> <!-- question 4 text -->
+		<a href="#five"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 5 when clicked & adds 1 to autism count -->
+         	<a href="#five"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 5 when clicked & adds 2 to autism count -->
+		<a href="#five"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#five"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 5 when clicked & adds 4 to autism count -->
+		<a href="#five"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 5 when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
