@@ -131,6 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
 		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
  	</div>
+
  	</div>
 </div>
 
@@ -195,6 +196,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!-- contains footer content across all pages -->
+    <style>
+      .progress-bar {
+        width: 500px;
+        background-color: #f0f0f0;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+      }
+
+      .progress {
+        width: 0px;
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Progress Bar</h2>
+
+    <div class="progress-bar">
+      <div id="progress" class="progress"></div>
+    </div>
+
+    <button onclick="increaseProgress()">Increase Progress</button>
+    <button onclick="resetProgress()">Reset</button>
+
+    <script>
+      const progressBar = document.getElementById("progress");
+      let currentProgress = 0;
+
+      function increaseProgress() {
+        if (currentProgress < 100) {
+          currentProgress += 5;
+          progressBar.style.width = currentProgress + "px";
+        }
+      }
+
+      function resetProgress() {
+        currentProgress = 0;
+        progressBar.style.width = "0px";
+      }
+    </script>
+  </body>
+
+	
 	<p>DIY!</p> <!-- footer text -->
 </footer>
 
