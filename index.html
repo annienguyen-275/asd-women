@@ -58,16 +58,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		autistic_count = autistic_count + 5;
         }
 	
-	function getResults(){ // function that makes results with probabilities appear in results paragraph
+	function getResults(){ // function that makes results appear in results paragraph
 		var resultText = document.getElementById("results"); // variable that stores results text 
-		resultText.innerHTML = "Your score is: " + autistic_count;}
+		resultText.innerHTML = "Your score is: " + autistic_count + "<br><br>";
+
+	// Always display the following text, regardless of the score
+    		var additionalText = 
+        		"0-56 - Does not indicate a high level of autistic traits.<br><br>" +
+        		"More than 56 - Indicates a high level of autistic traits.<br><br>" +
+        		"Click the button below to see a detailed interpretation of your score.";
+	// Append the additional text to the resultText
+    		resultText.innerHTML += additionalText; }
+
+function getInterpretation() { 
+    // Get the interpretation element
+    var interpretationText = document.getElementById("interpretation"); 
+
+    // Placeholder for the interpretation text
+    var interpretationResult = ""; 
+
+    // Conditional statements to provide interpretation based on the autistic_count
+    if (autistic_count > 18) {
+        interpretationResult = "<p>Based upon your responses, it appears that you likely have issues similar to those diagnosed with an autism spectrum disorder. <br><br> People who score similarly often qualify for a diagnosis of autism spectrum disorder. <br><br> You should not take this as a diagnosis or a recommendation for treatment. However, if you are interested in finding out more, one of our clinicians would love to talk to you.</p>";
+    } else {
+        interpretationResult = "<p>Based upon your responses, most likely you do NOT meet the diagnostic criteria for an autism spectrum disorder. <br><br> This is only a screening measure and is not a definitive diagnosis. Only a qualified mental health professional can diagnose mental disorders such as autism. <br><br> If you are interested in finding out more, one of our clinicians would love to talk to you.</p>";
+    }
+
+    // Set the result in the interpretation div
+    interpretationText.innerHTML = interpretationResult;
+}
 
 </script>	
 
 
 <!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
 <style>	
-.	body {
+	body {
 	margin: 0em;
 	}
 
@@ -190,22 +216,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains results content -->
-		<p id="results"></p> <!-- empty text where results will appear -->
 		<a onclick="getResults()" class="w3-btn w3-black">Get results</a> <!-- button that changes text when clicked -->
-		
-		<script> if (autistic_count > 56) {
-		<p>Based upon your responses, it appears that you likely have issues similar to those diagnosed with an autism spectrum disorder.
+		<p id="results"></p> <!-- empty text where results will appear -->
+	</div>
 
-People who score similarly often qualify for a diagnosis of autism spectrum disorder.
 
-You should not take this as a diagnosis or a recommendation for treatment. However, if you are interested in finding out more, one of our clinicians would love to talk to you. </p>
-		} else {
-		<p>Based upon your responses, most likely you do NOT meet the diagnostic criteria for an austism spectrum disorder.
-
-This is only a screening measure and is not a definitive diagnosis. Only a qualified mental health professional can diagnose mental disorders such as autism.
-
-If you are interested in finding out more, one of our clinicians would love to talk to you. </p>
-		</script>
+	<div id="content" class="w3-container"> <!-- contains interpretation content -->
+		<a onclick="getInterpretation()" class="w3-btn w3-black">What does my score mean?</a>
+		<p id="interpretation"></p> <!-- empty text where interpretation will appear -->
 	</div>
 </div>
 
