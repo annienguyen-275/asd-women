@@ -60,7 +60,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function getResults(){ // function that makes results with probabilities appear in results paragraph
 		var resultText = document.getElementById("results"); // variable that stores results text 
-		resultText.innerHTML = "Your score is: " + autistic_count; }
+		resultText.innerHTML = "Your score is: " + autistic_count <br> "0-56 - Does not indicate a high level of autistic traits." <br>
+
+More than "56  - Indicates a high level of autistic traits." <br>
+
+"Click Next to see detail interpretation of your score." ;}
 
 </script>	
 
@@ -192,6 +196,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> <!-- contains results content -->
 		<p id="results"></p> <!-- empty text where results will appear -->
 		<a onclick="getResults()" class="w3-btn w3-black">Get results</a> <!-- button that changes text when clicked -->
+		<a href="#six";" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 5 when clicked & adds 1 to autism count -->
 	</div>
 </div>
 
