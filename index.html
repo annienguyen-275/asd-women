@@ -60,32 +60,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function getResults(){ // function that makes results appear in results paragraph
 		var resultText = document.getElementById("results"); // variable that stores results text 
-		resultText.innerHTML = "Your score is: " + autistic_count + "<br><br>";
+		resultText.innerHTML = "<strong>Your score is: " + autistic_count + "</strong><br><br>";
 
 	// Always display the following text, regardless of the score
     		var additionalText = 
         		"0-56 - Does not indicate a high level of autistic traits.<br><br>" +
         		"More than 56 - Indicates a high level of autistic traits.<br><br>" +
-        		"Click the button below to see a detailed interpretation of your score.";
+        		"Click <strong>Next</strong> to see a detailed interpretation of your score.";
 	// Append the additional text to the resultText
-    		resultText.innerHTML += additionalText; }
+    		resultText.innerHTML += additionalText; 
 
-function getInterpretation() { 
+        // Show the "Next" button after results are displayed
+        document.getElementById("nextButton").style.display = "inline";
+}
+
+function saveInterpretation() { 
     // Get the interpretation element
-    var interpretationText = document.getElementById("interpretation"); 
+    // var interpretationText = document.getElementById("interpretation"); //
 
     // Placeholder for the interpretation text
     var interpretationResult = ""; 
 
     // Conditional statements to provide interpretation based on the autistic_count
     if (autistic_count > 18) {
-        interpretationResult = "<p>Based upon your responses, it appears that you likely have issues similar to those diagnosed with an autism spectrum disorder. <br><br> People who score similarly often qualify for a diagnosis of autism spectrum disorder. <br><br> You should not take this as a diagnosis or a recommendation for treatment. However, if you are interested in finding out more, one of our clinicians would love to talk to you.</p>";
+        interpretationResult = "<p>Based upon your responses, it appears that <strong> you likely have issues similar to those diagnosed with an autism spectrum disorder.</strong> <br><br> People who score similarly often qualify for a diagnosis of autism spectrum disorder. <br><br> You should not take this as a diagnosis or a recommendation for treatment. However, if you are interested in finding out more, one of our clinicians would love to talk to you. </p>";
     } else {
-        interpretationResult = "<p>Based upon your responses, most likely you do NOT meet the diagnostic criteria for an autism spectrum disorder. <br><br> This is only a screening measure and is not a definitive diagnosis. Only a qualified mental health professional can diagnose mental disorders such as autism. <br><br> If you are interested in finding out more, one of our clinicians would love to talk to you.</p>";
+        interpretationResult = "<p>Based upon your responses, <strong> most likely you do NOT meet the diagnostic criteria for an autism spectrum disorder.</strong> <br><br> This is only a screening measure and is not a definitive diagnosis. Only a qualified mental health professional can diagnose mental disorders such as autism. <br><br> If you are interested in finding out more, one of our clinicians would love to talk to you.</p>";
     }
 
-    // Set the result in the interpretation div
-    interpretationText.innerHTML = interpretationResult;
+    // Save the interpretation text to localStorage
+    localStorage.setItem("interpretationResult", interpretationResult);
 }
 
 </script>	
@@ -129,17 +133,18 @@ function getInterpretation() {
 <div id="content" class="w3-container"> <!-- contains text content -->
 	<p>Modified Girls Questionnaire for Autism for Adult Women (GQ-ASC) is designed to identify behaviors and abilities in women (18 and over) that are associated with autism.</p> <!-- intro paragraph -->
 
-	<p>Approximate time: 3-5 minutes to respond to 21 questions. <br>
+	<p>Approximate time: <strong>3-5 minutes</strong> to respond to <strong>21</strong> questions. <br>
 	Read each question and statement carefully, and rate how strongly you agree or disagree with it. <br> 
 	All responses are confidential.</p> <!-- instructions paragraph -->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- button that links to question 1 when clicked -->
 	
+
+<img src="autism-adults-stock-photo.jpg" alt="six women silhouette figures depicting neurodiversity" style="display:block; margin-top:20px;"> <!-- add image showing neurodiversity in women source: https://www.istockphoto.com/vector/neurodiversity-in-women-autism-adhd-female-brain-gm1944350137-556804794  -->
+
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!-- disclaimer -->
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!-- another disclaimer -->
-
-<img src="autism-adults-stock-photo.jpg" alt="six women silhouette figures depicting neurodiversity"> <!-- add image showing neurodiversity in women source: https://www.istockphoto.com/vector/neurodiversity-in-women-autism-adhd-female-brain-gm1944350137-556804794  -->
 
 </div> <!-- added closing div tag to fix footer; missing in original code -->
 
@@ -209,8 +214,24 @@ function getInterpretation() {
 	</div>
 </div>
 
-<!-- RESULTS PAGE -->
+<!-- QUESTION 5 PAGE -->
 <div class="page" id="five"> <!-- contains page content -->
+	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+		<h1>Question 5</h1> <!-- header title -->
+	</div>
+	
+	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
+		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
+		<a href="#six"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 6 when clicked & adds 1 to autism count -->
+         	<a href="#six"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 6 when clicked & adds 2 to autism count -->
+		<a href="#six"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 6 when clicked & adds 3 to autism count -->
+		<a href="#six"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 6 when clicked & adds 4 to autism count -->
+		<a href="#six"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 6 when clicked & adds 5 to autism count -->
+	</div>
+</div>
+
+<!-- RESULTS PAGE -->
+<div class="page" id="six"> <!-- contains page content -->
 	<div class="w3-container w3-flat-carrot"> <!-- contains header content -->
 		<h1>Results</h1> <!-- header title -->
 	</div>
@@ -221,11 +242,49 @@ function getInterpretation() {
 	</div>
 
 
-	<div id="content" class="w3-container"> <!-- contains interpretation content -->
-		<a onclick="getInterpretation()" class="w3-btn w3-black">What does my score mean?</a>
-		<p id="interpretation"></p> <!-- empty text where interpretation will appear -->
-	</div>
+    <div id="content" class="w3-container"> <!-- contains interpretation content -->
+        <a id="nextButton" style="display:none;" onclick="saveInterpretation(); window.location.href='#seven';" class="w3-btn w3-black">Next</a>
+        <p id="interpretation"></p> <!-- empty text where interpretation will appear -->
+    </div>
 </div>
+
+<!-- INTERPRETATION PAGE -->
+<div class="page" id="seven"> <!-- contains page content -->
+    <div class="w3-container w3-flat-carrot"> <!-- contains header content -->
+        <h1>What does your score mean?</h1> <!-- header title -->
+    </div>
+    <div id="content" class="w3-container">
+        <p id="interpretationText"></p> <!-- empty text where interpretation will appear -->
+    </div>
+</div>
+
+<script>
+    // This will load the interpretation when the user navigates to the interpretation page
+    window.onload = function() {
+    // Load results immediately on the results page
+    if (window.location.hash === "#six") {
+        getResults();
+    }
+
+    // Load interpretation immediately on the interpretation page
+    if (window.location.hash === "#seven") {
+        var interpretation = localStorage.getItem("interpretationResult");
+        if (interpretation) {
+            document.getElementById("interpretationText").innerHTML = interpretation;
+        }
+    }
+};
+
+// Detect when the hash changes (i.e., navigation between pages) to dynamically load content
+window.onhashchange = function() {
+    if (window.location.hash === "#seven") {
+        var interpretation = localStorage.getItem("interpretationResult");
+        if (interpretation) {
+            document.getElementById("interpretationText").innerHTML = interpretation; // Display interpretation
+        }
+    }
+};
+</script>
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!-- contains footer content across all pages -->
 	<p>DIY!</p> <!-- footer text -->
