@@ -118,15 +118,40 @@ function saveInterpretation() {
 	}
 
 	img, object{
-            	max-height:90%;
-        	max-width:90%;
+            	display: block; /* Ensure image is block-level */
+   		margin: 20px auto; /* Center horizontally with automatic margins */
+		max-height:30%;
+        	max-width:30%;
         	} <!-- resize image -->
+
+
+	/* Center all headers orizontally */
+	h1 {
+		text-align: center;
+	}
+
+
+	/* Flexbox to center header content */
+	#header {
+		display: flex;
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+	}
+
+	/* Flexbox to center content */
+	#content {
+		text-align: center; /* Center text inside the content */
+	}
+
+	.w3-btn {
+    margin: 0.3%; /* Adjust the margin value as needed */
+	}
 </style>
 
 <!-- STARTING PAGE -->
 
 <body>
-<div id="header" class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 	<h1>Holistic Evaluation of ASD in Women (HER-D)</h1> <!-- header title -->
 </div>
 	
@@ -137,7 +162,7 @@ function saveInterpretation() {
 	Read each question and statement carefully, and rate how strongly you agree or disagree with it. <br> 
 	All responses are confidential.</p> <!-- instructions paragraph -->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- button that links to question 1 when clicked -->
+	<a href="#one" class="w3-btn w3-flat-newbutton w3-round"> Get Started </a> <!-- button that links to question 1 when clicked -->
 	
 
 <img src="autism-adults-stock-photo.jpg" alt="six women silhouette figures depicting neurodiversity" style="display:block; margin-top:20px;"> <!-- add image showing neurodiversity in women source: https://www.istockphoto.com/vector/neurodiversity-in-women-autism-adhd-female-brain-gm1944350137-556804794  -->
@@ -150,218 +175,216 @@ function saveInterpretation() {
 
 <!-- QUESTION 1 PAGE -->
 <div class="page" id="one"> <!-- contains page content -->
-	<div id="header" class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 1</h1> <!-- header title -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>I enjoy immersing myself in fantasy worlds, such as books, video games, or other media.</p> <!-- question 1 text -->    
-		<a href="#two"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
-         	<a href="#two"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
-		<a href="#two"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
-		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
-		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
- 	</div>
-
+		<a href="#two"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 2 when clicked & adds 1 to autism count -->
+         	<a href="#two"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 2 when clicked & adds 2 to autism count -->
+		<a href="#two"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#two"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 2 when clicked & adds 4 to autism count -->
+		<a href="#two"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 2 when clicked & adds 5 to autism count -->
  	</div>
 </div>
 
 <!-- QUESTION 2 PAGE -->
 <div class="page" id="two"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 2</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>I have a strong interest in fictional stories, books, movies, or TV shows.</p> <!-- question 2 text -->
-		<a href="#three"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 3 when clicked & adds 1 to autism count -->
-         	<a href="#three"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 3 when clicked & adds 2 to autism count -->
-		<a href="#three"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 3 when clicked & adds 3 to autism count -->
-		<a href="#three"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 3 when clicked & adds 4 to autism count -->
-		<a href="#three"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 3 when clicked & adds 5 to autism count -->
+		<a href="#three"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 3 when clicked & adds 1 to autism count -->
+         	<a href="#three"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 3 when clicked & adds 2 to autism count -->
+		<a href="#three"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 3 when clicked & adds 3 to autism count -->
+		<a href="#three"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 3 when clicked & adds 4 to autism count -->
+		<a href="#three"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 3 when clicked & adds 5 to autism count -->
 	</div>
 </div>	
 
 <!-- QUESTION 3 PAGE -->
 <div class="page" id="three"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 3</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>At any point in my life, I played imaginatively, similar to others my age.</p> <!-- question 3 text -->
-		<a href="#four"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 4 when clicked & adds 1 to autism count -->
-         	<a href="#four"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 4 when clicked & adds 2 to autism count -->
-		<a href="#four"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
-		<a href="#four"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 4 when clicked & adds 4 to autism count -->
-		<a href="#four"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 4 when clicked & adds 5 to autism count -->
+		<a href="#four"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 4 when clicked & adds 1 to autism count -->
+         	<a href="#four"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 4 when clicked & adds 2 to autism count -->
+		<a href="#four"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#four"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 4 when clicked & adds 4 to autism count -->
+		<a href="#four"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 4 when clicked & adds 5 to autism count -->
 	</div>
 </div>	
 
 <!-- QUESTION 4 PAGE -->
 <div class="page" id="four"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 4</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>I have had imaginary friends or animals during my childhood or adulthood.</p> <!-- question 4 text -->
-		<a href="#five"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 5 when clicked & adds 1 to autism count -->
-         	<a href="#five"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 5 when clicked & adds 2 to autism count -->
-		<a href="#five"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
-		<a href="#five"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 5 when clicked & adds 4 to autism count -->
-		<a href="#five"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 5 when clicked & adds 5 to autism count -->
+		<a href="#five"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 5 when clicked & adds 1 to autism count -->
+         	<a href="#five"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 5 when clicked & adds 2 to autism count -->
+		<a href="#five"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 2 when clicked & adds 3 to autism count -->
+		<a href="#five"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 5 when clicked & adds 4 to autism count -->
+		<a href="#five"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 5 when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 <!-- QUESTION 5 PAGE -->
 <div class="page" id="five"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 5</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
 		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#six"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 6 when clicked & adds 1 to autism count -->
-         	<a href="#six"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 6 when clicked & adds 2 to autism count -->
-		<a href="#six"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 6 when clicked & adds 3 to autism count -->
-		<a href="#six"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 6 when clicked & adds 4 to autism count -->
-		<a href="#six"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 6 when clicked & adds 5 to autism count -->
+		<a href="#six"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 6 when clicked & adds 1 to autism count -->
+         	<a href="#six"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 6 when clicked & adds 2 to autism count -->
+		<a href="#six"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 6 when clicked & adds 3 to autism count -->
+		<a href="#six"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 6 when clicked & adds 4 to autism count -->
+		<a href="#six"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 6 when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 <!-- QUESTION 6 PAGE -->
 <div class="page" id="six"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 6</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#seven"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to question 7 when clicked & adds 1 to autism count -->
-         	<a href="#seven"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to question 7 when clicked & adds 2 to autism count -->
-		<a href="#seven"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to question 7 when clicked & adds 3 to autism count -->
-		<a href="#seven"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to question 7 when clicked & adds 4 to autism count -->
-		<a href="#seven"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to question 7 when clicked & adds 5 to autism count -->
+		<p>I mimic or adopt the behaviors, speech patterns, or mannerisms of other women to fit in social situations.</p> <!-- question 6 text -->
+		<a href="#seven"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to question 7 when clicked & adds 1 to autism count -->
+         	<a href="#seven"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to question 7 when clicked & adds 2 to autism count -->
+		<a href="#seven"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to question 7 when clicked & adds 3 to autism count -->
+		<a href="#seven"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to question 7 when clicked & adds 4 to autism count -->
+		<a href="#seven"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to question 7 when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 7 PAGE -->
 <div class="page" id="seven"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 7</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#eight"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#eight"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#eight"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#eight"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#eight"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I closely observe how other women interact and socialize, often identifying their behaviors to understand social norms.</p> <!-- question 7 text -->
+		<a href="#eight"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#eight"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#eight"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#eight"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#eight"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 8 PAGE -->
 <div class="page" id="eight"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 8</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#nine"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#nine"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#nine"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#nine"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#nine"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I often follow the lead of others in social situations to avoid standing out or making mistakes.</p> <!-- question 8 text -->
+		<a href="#nine"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#nine"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#nine"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#nine"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#nine"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 9 PAGE -->
 <div class="page" id="nine"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 9</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#ten"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#ten"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#ten"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#ten"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#ten"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I change my behavior, speech, or appearance depending on the social setting to avoid standing out.</p> <!-- question 9 text -->
+		<a href="#ten"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#ten"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#ten"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#ten"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#ten"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 10 PAGE -->
 <div class="page" id="ten"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 10</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#eleven"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#eleven"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#eleven"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#eleven"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#eleven"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I am attached to certain objects (e.g., favorite toy, pillow, or piece of cloth) that I carry or touch to calm myself.</p> <!-- question 10 text -->
+		<a href="#eleven"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#eleven"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#eleven"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#eleven"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#eleven"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 11 PAGE -->
 <div class="page" id="eleven"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 11</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#twelve"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twelve"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twelve"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twelve"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twelve"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I have expressed distress during grooming (e.g., fingernail cutting, haircutting, combing) or when touched in specific ways (e.g., feet, hair).</p> <!-- question 11 text -->
+		<a href="#twelve"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twelve"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twelve"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twelve"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twelve"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 12 PAGE -->
 <div class="page" id="twelve"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 12</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 5 text -->
-		<a href="#thirteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#thirteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#thirteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#thirteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#thirteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>Certain social situations cause me to go silent or struggle to speak.</p> <!-- question 12 text -->
+		<a href="#thirteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#thirteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#thirteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#thirteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#thirteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 13 PAGE -->
 <div class="page" id="thirteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 13</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#fourteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#fourteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#fourteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#fourteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#fourteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I am distressed by certain smells or avoid certain tastes in specific environments or situations (e.g., in public, at home).</p> <!-- question 13 text -->
+		<a href="#fourteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#fourteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#fourteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#fourteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#fourteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
@@ -369,17 +392,17 @@ function saveInterpretation() {
 
 <!-- QUESTION 14 PAGE -->
 <div class="page" id="fourteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 14</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#fifteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#fifteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#fifteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#fifteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#fifteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I am sensitive to the texture of clothing or fabric, and this influences my clothing choices.</p> <!-- question 14 text -->
+		<a href="#fifteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#fifteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#fifteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#fifteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#fifteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
@@ -387,34 +410,34 @@ function saveInterpretation() {
 
 <!-- QUESTION 15 PAGE -->
 <div class="page" id="fifteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 15</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#sixteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#sixteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#sixteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#sixteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#sixteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I feel the need to rehearse conversations or social interactions in my head before engaging in them.</p> <!-- question 15 text -->
+		<a href="#sixteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#sixteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#sixteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#sixteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#sixteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 16 PAGE -->
 <div class="page" id="sixteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 16</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#seventeen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#seventeen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#seventeen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#seventeen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#seventeen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I can socialize well for a period, but I often feel exhausted afterward.</p> <!-- question 16 text -->
+		<a href="#seventeen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#seventeen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#seventeen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#seventeen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#seventeen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
@@ -422,196 +445,178 @@ function saveInterpretation() {
 
 <!-- QUESTION 17 PAGE -->
 <div class="page" id="seventeen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 17</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#eighteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#eighteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#eighteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#eighteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#eighteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>In social situations, I sometimes hide my confusion by controlling my facial expressions to avoid standing out.</p> <!-- question 17 text -->
+		<a href="#eighteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#eighteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#eighteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#eighteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#eighteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 18 PAGE -->
 <div class="page" id="eighteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 18</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#nineteen"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#nineteen"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#nineteen"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#nineteen"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#nineteen"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I experience strong emotional reactions to situations, but the intensity of my emotions may vary depending on the context.</p> <!-- question 18 text -->
+		<a href="#nineteen"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#nineteen"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#nineteen"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#nineteen"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#nineteen"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 19 PAGE -->
 <div class="page" id="nineteen"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 19</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I apologize when I make a social error, depending on the situation or the person I am interacting with.</p> <!-- question 19 text -->
+		<a href="#twenty"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 20 PAGE -->
 <div class="page" id="twenty"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 20</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-one"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-one"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-one"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-one"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-one"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I find it difficult to engage in small talk, preferring more meaningful conversations.</p> <!-- question 20 text -->
+		<a href="#twenty-one"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-one"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-one"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-one"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-one"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 21 PAGE -->
 <div class="page" id="twenty-one"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 21</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-two"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-two"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-two"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-two"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-two"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I frequently replay past social situations in my mind, thinking about what I could have done differently.</p> <!-- question 21 text -->
+		<a href="#twenty-two"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-two"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-two"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-two"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-two"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 22 PAGE -->
 <div class="page" id="twenty-two"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 22</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-three"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-three"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-three"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-three"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-three"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>At any point in my life, I preferred structured or repetitive play, such as organizing objects or following patterns.</p> <!-- question 17 text -->
+		<a href="#twenty-three"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-three"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-three"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-three"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-three"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
-
 
 
 <!-- QUESTION 23 PAGE -->
 <div class="page" id="twenty-three"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 23</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-four"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-four"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-four"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-four"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-four"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I have had a strong interest in certain topics or activities, regardless of social expectations or gender norms.</p> <!-- question 18 text -->
+		<a href="#twenty-four"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-four"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-four"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-four"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-four"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 24 PAGE -->
 <div class="page" id="twenty-four"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 24</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-five"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-five"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
-	</div>
-</div>
-
-
-
-<!-- QUESTION 24 PAGE -->
-<div class="page" id="twenty-four"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
-		<h1>Question 24</h1> <!-- header title -->
-	</div>
-	
-	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-five"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-five"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-five"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>At some points in my life, I have had interests that were advanced or unusual for my age (e.g., opera).</p> <!-- question 19 text -->
+		<a href="#twenty-five"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-five"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-five"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-five"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-five"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
 
 <!-- QUESTION 25 PAGE -->
 <div class="page" id="twenty-five"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Question 25</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
-		<p>At any point in my life, I created my own complex ‘set ups’ with toys or objects.</p> <!-- question 13 text -->
-		<a href="#twenty-six"  onclick="autisticAdd1();" class="w3-btn w3-black">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
-         	<a href="#twenty-six"  onclick="autisticAdd2();" class="w3-btn w3-black">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
-		<a href="#twenty-six"  onclick="autisticAdd3();" class="w3-btn w3-black">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
-		<a href="#twenty-six"  onclick="autisticAdd4();" class="w3-btn w3-black">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
-		<a href="#twenty-six"  onclick="autisticAdd5();" class="w3-btn w3-black">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
+		<p>I am drawn to hobbies or interests that I can pursue with intense focus and dedication.</p> <!-- question 20 text -->
+		<a href="#twenty-six"  onclick="autisticAdd1();" class="w3-btn w3-flat-newbutton w3-round">Strongly disagree</a> <!-- button that links to next question when clicked & adds 1 to autism count -->
+         	<a href="#twenty-six"  onclick="autisticAdd2();" class="w3-btn w3-flat-newbutton w3-round">Somewhat disagree</a> <!-- button that links to next question when clicked & adds 2 to autism count -->
+		<a href="#twenty-six"  onclick="autisticAdd3();" class="w3-btn w3-flat-newbutton w3-round">Neither agree nor disagree</a> <!-- button that links to next question when clicked & adds 3 to autism count -->
+		<a href="#twenty-six"  onclick="autisticAdd4();" class="w3-btn w3-flat-newbutton w3-round">Somewhat agree</a> <!-- button that links to next question when clicked & adds 4 to autism count -->
+		<a href="#twenty-six"  onclick="autisticAdd5();" class="w3-btn w3-flat-newbutton w3-round">Strongly agree</a> <!-- button that links to next question when clicked & adds 5 to autism count -->
 	</div>
 </div>
 
+
 <!-- RESULTS PAGE -->
 <div class="page" id="twenty-six"> <!-- contains page content -->
-	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
 		<h1>Results</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains results content -->
-		<a onclick="getResults()" class="w3-btn w3-black">Get results</a> <!-- button that changes text when clicked -->
+		<a onclick="getResults()" class="w3-btn w3-flat-newbutton w3-round">Get results</a> <!-- button that changes text when clicked -->
 		<p id="results"></p> <!-- empty text where results will appear -->
 	</div>
 
 
     <div id="content" class="w3-container"> <!-- contains interpretation content -->
-        <a id="nextButton" style="display:none;" onclick="saveInterpretation(); window.location.href='#twenty-seven';" class="w3-btn w3-black">Next</a>
+        <a id="nextButton" style="display:none;" onclick="saveInterpretation(); window.location.href='#twenty-seven';" class="w3-btn w3-flat-newbutton w3-round">Next</a>
         <p id="interpretation"></p> <!-- empty text where interpretation will appear -->
     </div>
 </div>
 
 <!-- INTERPRETATION PAGE -->
 <div class="page" id="twenty-seven"> <!-- contains page content -->
-    <div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
         <h1>What does your score mean?</h1> <!-- header title -->
     </div>
     <div id="content" class="w3-container">
@@ -647,7 +652,7 @@ window.onhashchange = function() {
 };
 </script>
 
-<footer class="w3-bottom w3-container w3-flat-amethyst"> <!-- contains footer content across all pages -->
+<footer class="w3-bottom w3-container w3-flat-newheader"> <!-- contains footer content across all pages -->
 	<p>DIY!</p> <!-- footer text -->
 </footer>
 
