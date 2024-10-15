@@ -98,7 +98,7 @@ function saveInterpretation() {
 <!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
 <style>	
 	body {
-	margin: 0em;
+		margin: 0em;
 	}
 
 	.page {
@@ -109,7 +109,12 @@ function saveInterpretation() {
     		left: -100vw;
     		overflow-y: auto;
     		z-index: 0;
-    		background-color: hsl(0,0%,100%);
+    		background-color: #FFFBFF;
+	}
+
+	
+	.starting-page { /* change background-color to the same as the other pages */
+		background-color: #FFFBFF;
 	}
 
   	.page:target {
@@ -120,8 +125,10 @@ function saveInterpretation() {
 	img, object{
             	display: block; /* Ensure image is block-level */
    		margin: 20px auto; /* Center horizontally with automatic margins */
-		max-height:30%;
-        	max-width:30%;
+		max-height: 42%;
+        	max-width:42%;
+		border: 5px solid #B8849D;
+		border-radius: 8px;
         	} <!-- resize image -->
 
 
@@ -146,10 +153,12 @@ function saveInterpretation() {
     		height: calc(100vh - 100px); /* Adjust height to fill the remaining space */
 	}
 
+
 	#content p {
     		text-align: center; /* Center the text inside each paragraph */
 		margin-left: 10%;
 		margin-right: 10%;
+		font-size: 20px;
 		}
 
 
@@ -168,7 +177,7 @@ function saveInterpretation() {
 		margin-top: 10px; /* Adjust this value to control the space */
 		text-align: center;
 	}
-	
+		
 
 </style>
 
@@ -179,18 +188,19 @@ function saveInterpretation() {
 	<h1>Holistic Evaluation of ASD in Women <strong>(HER-D)</strong></h1> <!-- header title -->
 </div>
 	
-<div id="content" class="w3-container"> <!-- contains text content -->
-	<p>Holistic Evaluation of ASD in Women (HER-D) is designed to identify behaviors and abilities in women (18+) that are associated with autism.</p> <!-- intro paragraph -->
+<div class="starting-page" id="content" class="w3-container"> <!-- contains text content -->
+	<p>Holistic Evaluation of ASD in Women (HER-D) is designed to identify behaviors and abilities in women (18 and over) that are associated with autism.</p> <!-- intro paragraph -->
 
 	<p>Approximate time: <strong>5-7 minutes</strong> to respond to <strong>25</strong> questions. <br>
 	Read each question and statement carefully, and rate how strongly you agree or disagree with it. <br> 
 	All responses are confidential.</p> <!-- instructions paragraph -->
 	
-	<a href="#one" class="w3-btn w3-flat-newbutton w3-round"> Get Started </a> <!-- button that links to question 1 when clicked -->
+	<a href="#one" class="w3-btn w3-flat-newbutton w3-round"> Get started </a> <!-- button that links to question 1 when clicked -->
 	
 
 <img src="autism-adults-stock-photo.jpg" alt="six women silhouette figures depicting neurodiversity" style="display:block; margin-top:20px;"> <!-- add image showing neurodiversity in women source: https://www.istockphoto.com/vector/neurodiversity-in-women-autism-adhd-female-brain-gm1944350137-556804794  -->
 
+<!--
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!-- disclaimer -->
 
 </div> <!-- added closing div tag to fix footer; missing in original code -->
