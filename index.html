@@ -64,9 +64,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	// Always display the following text, regardless of the score
     		var additionalText = 
-        		"0-83 - Does not indicate a high level of autistic traits.<br><br>" +
-        		"More than 83 - Indicates a high level of autistic traits.<br><br>" +
-        		"Click <strong>Next</strong> to see a detailed interpretation of your score.";
+        		"<strong>0-83</strong> - Suggests fewer traits commonly linked to autism.<br><br>" +
+        		"<strong>Above 83</strong> - Suggests a higher likelihood of traits commonly linked to autism.<br><br>" +
+        		"Click <strong>Next</strong> to read a detailed explanation of what your score means.";
 	// Append the additional text to the resultText
     		resultText.innerHTML += additionalText; 
 
@@ -83,9 +83,9 @@ function saveInterpretation() {
 
     // Conditional statements to provide interpretation based on the autistic_count
     if (autistic_count > 83) {
-        interpretationResult = "<p>Based upon your responses, it appears that <strong> you likely have issues similar to those diagnosed with an autism spectrum disorder.</strong> <br><br> People who score similarly often qualify for a diagnosis of autism spectrum disorder. <br><br> You should not take this as a diagnosis or a recommendation for treatment.</p>";
+        interpretationResult = "<p>Based upon your responses, it seems <strong> you may experience challenges similar to those associated with autism.</strong> <br><br> People with scores like yours often qualify for an autism diagnosis. <br><br> <strong>Please note:</strong> This assessment is not a definitive diagnosis or a recommendation for treatment. If you have concerns about autism or related issues, we encourage you to seek guidance from a qualified mental health professional.</p>";
     } else {
-        interpretationResult = "<p>Based upon your responses, <strong> most likely you do NOT meet the diagnostic criteria for an autism spectrum disorder.</strong> <br><br> This is only a screening measure and is not a definitive diagnosis. Only a qualified mental health professional can diagnose mental disorders such as autism. <br></p>";
+        interpretationResult = "<p>Based upon your responses, it seems <strong> you may not meet the criteria for autism.</strong> <br><br> <strong>Please remember:</strong> This assessment is a screening tool and not a formal diagnosis. Only a qualified mental health professional can provide a diagnosis for autism or any other mental health condition. <br></p>";
     }
 
     // Save the interpretation text to localStorage
@@ -189,11 +189,11 @@ function saveInterpretation() {
 </div>
 	
 <div class="starting-page" id="content" class="w3-container"> <!-- contains text content -->
-	<p>Holistic Evaluation of ASD in Women (HER-D) is designed to identify behaviors and abilities in women (18 and over) that are associated with autism.</p> <!-- intro paragraph -->
+	<p>Welcome to the <strong>Holistic Evaluation of ASD in Women (HER-D)</strong>! This assessment is designed to identify behaviors and abilities in women aged 18 and older that may be associated with autism.</p> <!-- intro paragraph -->
 
-	<p>Approximate time: <strong>5-7 minutes</strong> to respond to <strong>25</strong> questions. <br>
-	Read each question and statement carefully, and rate how strongly you agree or disagree with it. <br> 
-	All responses are confidential.</p> <!-- instructions paragraph -->
+	<p><strong>Estimated time:</strong> <strong>5-7</strong> minutes to answer <strong>25</strong> questions. <br>
+	Please read each statement carefully and indicate how much you agree or disagree. <br> 
+	Your responses are confidential.</p> <!-- instructions paragraph -->
 	
 	<a href="#one" class="w3-btn w3-flat-newbutton w3-round"> Get started </a> <!-- button that links to question 1 when clicked -->
 	
@@ -208,7 +208,7 @@ function saveInterpretation() {
 <!-- QUESTION 1 PAGE -->
 <div class="page" id="one"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 1</strong> | Imagination and play</h1> <!-- header title -->
+		<h1><strong>1</strong> | Imagination and play</h1> <!-- header title -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -224,7 +224,7 @@ function saveInterpretation() {
 <!-- QUESTION 2 PAGE -->
 <div class="page" id="two"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 2</strong> | Imagination and play</h1> <!-- header title -->
+		<h1><strong>2</strong> | Imagination and play</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -240,7 +240,7 @@ function saveInterpretation() {
 <!-- QUESTION 3 PAGE -->
 <div class="page" id="three"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 3</strong> | Imagination and play</h1> <!-- header title -->
+		<h1><strong>3</strong> | Imagination and play</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -256,7 +256,7 @@ function saveInterpretation() {
 <!-- QUESTION 4 PAGE -->
 <div class="page" id="four"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 4</strong> | Imagination and play</h1> <!-- header title -->
+		<h1><strong>4</strong> | Imagination and play</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -272,7 +272,7 @@ function saveInterpretation() {
 <!-- QUESTION 5 PAGE -->
 <div class="page" id="five"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 5</strong> | Imagination and play</h1> <!-- header title -->
+		<h1><strong>5</strong> | Imagination and play</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -288,7 +288,7 @@ function saveInterpretation() {
 <!-- QUESTION 6 PAGE -->
 <div class="page" id="six"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 6</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>6</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -305,7 +305,7 @@ function saveInterpretation() {
 <!-- QUESTION 7 PAGE -->
 <div class="page" id="seven"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 7</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>7</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -322,7 +322,7 @@ function saveInterpretation() {
 <!-- QUESTION 8 PAGE -->
 <div class="page" id="eight"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 8</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>8</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -339,7 +339,7 @@ function saveInterpretation() {
 <!-- QUESTION 9 PAGE -->
 <div class="page" id="nine"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 9</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>9</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -356,7 +356,7 @@ function saveInterpretation() {
 <!-- QUESTION 10 PAGE -->
 <div class="page" id="ten"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 10</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>10</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -373,7 +373,7 @@ function saveInterpretation() {
 <!-- QUESTION 11 PAGE -->
 <div class="page" id="eleven"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 11</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>11</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -390,7 +390,7 @@ function saveInterpretation() {
 <!-- QUESTION 12 PAGE -->
 <div class="page" id="twelve"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 12</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>12</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -407,7 +407,7 @@ function saveInterpretation() {
 <!-- QUESTION 13 PAGE -->
 <div class="page" id="thirteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 13</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>13</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -425,7 +425,7 @@ function saveInterpretation() {
 <!-- QUESTION 14 PAGE -->
 <div class="page" id="fourteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 14</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>14</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -443,7 +443,7 @@ function saveInterpretation() {
 <!-- QUESTION 15 PAGE -->
 <div class="page" id="fifteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 15</strong> | Camouflaging</h1> <!-- header title -->
+		<h1><strong>15</strong> | Camouflaging</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -460,7 +460,7 @@ function saveInterpretation() {
 <!-- QUESTION 16 PAGE -->
 <div class="page" id="sixteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 16</strong> | Socializing</h1> <!-- header title -->
+		<h1><strong>16</strong> | Socializing</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -478,7 +478,7 @@ function saveInterpretation() {
 <!-- QUESTION 17 PAGE -->
 <div class="page" id="seventeen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 17</strong> | Socializing</h1> <!-- header title -->
+		<h1><strong>17</strong> | Socializing</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -495,7 +495,7 @@ function saveInterpretation() {
 <!-- QUESTION 18 PAGE -->
 <div class="page" id="eighteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 18</strong> | Socializing</h1> <!-- header title -->
+		<h1><strong>18</strong> | Socializing</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -512,7 +512,7 @@ function saveInterpretation() {
 <!-- QUESTION 19 PAGE -->
 <div class="page" id="nineteen"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 19</strong> | Socializing</h1> <!-- header title -->
+		<h1><strong>19</strong> | Socializing</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -529,7 +529,7 @@ function saveInterpretation() {
 <!-- QUESTION 20 PAGE -->
 <div class="page" id="twenty"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 20</strong> | Socializing</h1> <!-- header title -->
+		<h1><strong>20</strong> | Socializing</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -546,7 +546,7 @@ function saveInterpretation() {
 <!-- QUESTION 21 PAGE -->
 <div class="page" id="twenty-one"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 21</strong> | Interests</h1> <!-- header title -->
+		<h1><strong>21</strong> | Interests</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -563,7 +563,7 @@ function saveInterpretation() {
 <!-- QUESTION 22 PAGE -->
 <div class="page" id="twenty-two"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 22</strong> | Interests</h1> <!-- header title -->
+		<h1><strong>22</strong> | Interests</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -580,7 +580,7 @@ function saveInterpretation() {
 <!-- QUESTION 23 PAGE -->
 <div class="page" id="twenty-three"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 23</strong> | Interests</h1> <!-- header title -->
+		<h1><strong>23</strong> | Interests</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -597,7 +597,7 @@ function saveInterpretation() {
 <!-- QUESTION 24 PAGE -->
 <div class="page" id="twenty-four"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 24</strong> | Interests</h1> <!-- header title -->
+		<h1><strong>24</strong> | Interests</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
@@ -614,7 +614,7 @@ function saveInterpretation() {
 <!-- QUESTION 25 PAGE -->
 <div class="page" id="twenty-five"> <!-- contains page content -->
 	<div id="header" class="w3-container w3-flat-newheader"> <!-- contains header content -->
-		<h1><strong>Question 25</strong> | Interests</h1> <!-- header title -->
+		<h1><strong>25</strong> | Interests</h1> <!-- header title -->
 	</div>
 	
 	<div id="content" class="w3-container"> <!-- contains question and buttons content -->
