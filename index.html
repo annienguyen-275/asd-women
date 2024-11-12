@@ -161,8 +161,27 @@ function saveInterpretation() {
 		flex-direction: column; /* Stack buttons vertically */
     		justify-content: center; /* Center buttons vertically within this div */
     		align-items: center; /* Center buttons horizontally within this div */
-    		height: calc(100vh - 100px); /* Adjust height to fill the remaining space */
+		height: calc(100vh - 100px); /* Adjust height to fill the remaining space */
+ 
 	}
+
+	
+		/* Flexbox to center content */
+	#content2 {
+   		display: flex;
+		flex-direction: column; /* Stack buttons vertically */
+    		justify-content: center; /* Center buttons vertically within this div */
+    		align-items: center; /* Center buttons horizontally within this div */
+	}
+	
+	
+	#resources {
+    	display: flex;
+    	flex-direction: row; /* Arrange items in a horizontal row */
+    	justify-content: center; /* Center items horizontally within this div */
+   	 align-items: center; /* Center items vertically within this div */
+	}
+	
 
 
 	#content p {
@@ -171,7 +190,7 @@ function saveInterpretation() {
 		margin-right: 10%;
 		font-size: 18 px;
 		}
-
+	
 	
 	#backButton {
 	margin-top: 30px;
@@ -726,6 +745,7 @@ function saveInterpretation() {
     </div>
     
     <div id="content" class="w3-container"> <!-- contains results and interpretation content -->
+	<p>You've reached the end of the questionnaire! Thank you for taking the time to complete it. Click <strong>Get results</strong> to view your score.</p>
         <a onclick="getResults()" class="w3-btn w3-flat-newbutton w3-round">Get results</a> <!-- button that changes text when clicked -->
         <p id="results"></p> <!-- empty text where results will appear -->
         
@@ -787,18 +807,32 @@ window.onhashchange = function() {
         <p>Online autism tests can help with self-discovery and may guide you toward seeking a formal diagnosis. Although not definitive, these tests provide useful insights.
 For next steps, check out these resources:
 
+<div id="resources" class="w3-container">
+<div id="content2" class="w3-container">
+<a href="https://awnnetwork.org/"; class="w3-btn w3-flat-newbutton w3-round">Autistic Women & Nonbinary Network (AWN)</a> <!-- button that links to AWN website -->
+
 </p> <!-- resource blurb -->
 
-        <p><strong>Autistic Women & Nonbinary Network (AWN)</strong>: Gender-inclusive, offering newsletters, webinars, and practical resources aimed at combating stereotypes and supporting neurodivergent individuals. Learn more.
+        <p>Gender-inclusive, offering newsletters, webinars, and practical resources aimed at combating stereotypes and supporting neurodivergent individuals.
 </p> <!-- resource 1 blurb -->
+</div>
 
-        <p><strong>Stimpunks Foundation</strong>: Empowers neurodivergent individuals, advocates for neurodivergent rights, and provides accessible resources like blogs, newsletters, and webinars. Explore here.
+<div id="content2" class="w3-container">
+<a href="https://stimpunks.org/about/"; class="w3-btn w3-flat-newbutton w3-round">Stimpunks Foundation</a> <!-- button that links to Stimpuniks website -->
+
+        <p>Empowers neurodivergent individuals, advocates for neurodivergent rights, and provides accessible resources like blogs, newsletters, and webinars.
 </p> <!-- resource 2 blurb -->
+</div>
 
-        <p><strong>Cleveland Clinic – Adult Autism Diagnosis</strong>: Offers guidance on the adult diagnosis process, highlighting the importance of specialists and tools like ADOS. Read more. Read more here.
+<div id="content2" class="w3-container">
+<a href="https://health.clevelandclinic.org/adult-autism-diagnosis"; class="w3-btn w3-flat-newbutton w3-round">Cleveland Clinic - Adult Autism Diagnosis</a> <!-- button that links to Stimpuniks website -->
+
+        <p>Offers guidance on the adult diagnosis process, highlighting the importance of specialists and tools like ADOS.
 </p> <!-- resource 3 blurb -->
+</div>
 
     </div>
+	</div>
 
 </div>
 
