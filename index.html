@@ -166,13 +166,32 @@ function saveInterpretation() {
 	}
 
 	
-		/* Flexbox to center content */
-	#content2 {
-   		display: flex;
-		flex-direction: column; /* Stack buttons vertically */
-    		justify-content: center; /* Center buttons vertically within this div */
-    		align-items: center; /* Center buttons horizontally within this div */
-	}
+/* Flexbox to center content */
+#content2 {
+    display: flex;
+    flex-direction: column; /* Stack buttons and text vertically */
+    justify-content: center; /* Center vertically within each box */
+    align-items: center; /* Center horizontally within each box */
+    min-height: 200px; /* Set a minimum height for each box to be consistent */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Consistent height for buttons */
+.w3-btn {
+    height: 40px; /* Set a fixed height for buttons */
+    display: flex;
+    align-items: center; /* Center text vertically within button */
+    justify-content: center; /* Center text horizontally within button */
+}
+
+/* Ensuring paragraph text aligns consistently */
+#content2 p {
+    margin: 0;
+    flex-grow: 1; /* Allow text to take up equal space */
+    display: flex;
+    align-items: center; /* Center vertically */
+}
 	
 	
 	#resources {
@@ -809,7 +828,7 @@ For next steps, check out these resources:
 
 <div id="resources" class="w3-container">
 <div id="content2" class="w3-container">
-<a href="https://awnnetwork.org/"; class="w3-btn w3-flat-newbutton w3-round">Autistic Women & Nonbinary Network (AWN)</a> <!-- button that links to AWN website -->
+<a href="https://awnnetwork.org/" target="_blank" class="w3-btn w3-flat-newbutton w3-round">Autistic Women & Nonbinary Network (AWN)</a> <!-- button that links to AWN website -->
 
 </p> <!-- resource blurb -->
 
@@ -818,14 +837,14 @@ For next steps, check out these resources:
 </div>
 
 <div id="content2" class="w3-container">
-<a href="https://stimpunks.org/about/"; class="w3-btn w3-flat-newbutton w3-round">Stimpunks Foundation</a> <!-- button that links to Stimpuniks website -->
+<a href="https://stimpunks.org/about/" target="_blank" class="w3-btn w3-flat-newbutton w3-round">Stimpunks Foundation</a> <!-- button that links to Stimpuniks website -->
 
         <p>Empowers neurodivergent individuals, advocates for neurodivergent rights, and provides accessible resources like blogs, newsletters, and webinars.
 </p> <!-- resource 2 blurb -->
 </div>
 
 <div id="content2" class="w3-container">
-<a href="https://health.clevelandclinic.org/adult-autism-diagnosis"; class="w3-btn w3-flat-newbutton w3-round">Cleveland Clinic - Adult Autism Diagnosis</a> <!-- button that links to Stimpuniks website -->
+<a href="https://health.clevelandclinic.org/adult-autism-diagnosis" target="_blank" class="w3-btn w3-flat-newbutton w3-round">Cleveland Clinic - Adult Autism Diagnosis</a> <!-- button that links to Stimpuniks website -->
 
         <p>Offers guidance on the adult diagnosis process, highlighting the importance of specialists and tools like ADOS.
 </p> <!-- resource 3 blurb -->
