@@ -233,31 +233,15 @@ function saveInterpretation() {
 	}
 
 
-/* Responsive styles for mobile */
-@media (max-width: 600px) {
-    /* Adjust the content container */
-    #content2 {
-        flex-direction: column; /* Keep items stacked vertically */
-        min-height: auto; /* Remove fixed height for flexibility */
-        padding: 5px; /* Reduce padding for smaller screens */
-        border-width: 3px; /* Make borders thinner on mobile */
+/* Add a media query for mobile view */
+@media (max-width: 768px) {
+    #resources {
+        flex-direction: column; /* Stack content2 divs vertically */
     }
-    
-    /* Adjust button size */
-    .w3-btn {
-        font-size: 14px; /* Reduce button text size */
-        height: auto; /* Allow height to adjust based on content */
-        padding: 8px 12px; /* Add padding for a more compact look */
-    }
-
-    /* Adjust paragraph text */
-    #content2 p {
-        font-size: 14px; /* Reduce font size for mobile readability */
-        margin: 5px 0; /* Add some vertical margin between elements */
-    }
+    #content p, #content2 p { 
+        font-size: 15.5px; /* Make text smaller on mobile */
+    }	
 }
-
-	
 
 </style>
 
